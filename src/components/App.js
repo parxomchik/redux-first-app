@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
-
-class App extends React.Component {
+import Header from './common/Header';
+export default class App extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <p>Header here...</p>
+        <Header/>
         {this.props.children}
 
       </div>
@@ -14,6 +14,4 @@ class App extends React.Component {
 
 App.props = {
   children: PropTypes.object.isRequired
-}
-
-export default App;
+};

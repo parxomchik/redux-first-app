@@ -1,7 +1,7 @@
-import { combineRedusers } from 'react';
+import { combineReducers } from 'redux';
 import courses from './courceReduser';
 
-const rootReduser = combineRedusers({
+const rootReduser = combineReducers({
   courses
 });
 

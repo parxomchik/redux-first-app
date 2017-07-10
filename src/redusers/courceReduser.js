@@ -1,7 +1,8 @@
 export default function courseReduser(state = [], action) {
+
   switch(action.type) {
     case 'CREATE_COURSE':
-      [...state,
+      return [...state,
         Object.assign({} , action.course)
       ];
     default:

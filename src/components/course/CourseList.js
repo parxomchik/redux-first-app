@@ -3,7 +3,6 @@ import CourseListRow from './CourseListRow';
 
 const CourseList = ({ courses
 }) => {
-  console.log(courses);
   return (
     <table className="table">
       <thead>

@@ -23,11 +23,16 @@ class CoursesPage extends React.Component {
     onClickSave() {
       this.props.dispatch(courseActions.createCourse(this.state.course));
     }
+
+    courseRow(course, index) {
+      return <div key={index}>{course.title}</div>;
+    }
   render() {
     return (
       <div>
         <h1>Courses</h1>
         <h2>Add Course</h2>
+        {this.props.courses.map(this.courseRow)}
         <input
           type="text"
           onChange={this.onTitleChange}
@@ -40,6 +45,12 @@ class CoursesPage extends React.Component {
     );
   }
 }
+
+CoursesPage.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  courses: PropTypes.array.isRequired
+};
+
 
 function mapStateToProps(state, ownProps) {
   return {
